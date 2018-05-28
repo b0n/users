@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \App\Model\Entity\User[] $users
+ * @property \Users\Model\Entity\User[] $users
  */
 class Role extends Entity
 {
