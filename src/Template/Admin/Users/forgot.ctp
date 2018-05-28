@@ -3,7 +3,6 @@
  * @var \App\View\AppView $this
  */
 ?>
-<?= $this->Flash->render() ?>
 <?= $this->Form->create(); ?>
 <?= $this->Form->control('username', ['label' => false, 'placeholder' => __('Username')]); ?>
 <div class="row">

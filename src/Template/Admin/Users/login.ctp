@@ -4,7 +4,6 @@
  */
 ?>
 <p class="login-box-msg">Sign in to start your session</p>
-<?= $this->Flash->render() ?>
 <?= $this->Form->create() ?>
 <?= $this->Form->control('username', ['label' => false, 'placeholder' => __('Username')]) ?>
 <?= $this->Form->control('password', ['label' => false, 'placeholder' => __('Password')]) ?>
