@@ -6,18 +6,22 @@
 
 $this->extend('Cirici/AdminLTE./Common/index');
 
-$this->assign('subtitle', 'Index');
-
 $this->start('breadcrumb');
 $this->Breadcrumbs
-    ->add(__('Users'), ['action' => 'index'])
-    ->add('Index', null, ['class' => 'active']);
+    ->add(__d('funayaki', 'Users'), $this->request->getRequestTarget());
 
 echo $this->Breadcrumbs->render();
 $this->end();
 
 $this->start('page-numbers');
 echo $this->Paginator->numbers();
+$this->end();
+
+$this->append('header-actions');
+echo $this->Html->link(__d('fuyayaki', 'New User'),
+    ['action' => 'add'],
+    ['class' => 'btn btn-default pull-right']
+);
 $this->end();
 ?>
 
