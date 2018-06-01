@@ -6,16 +6,19 @@
 
 use Cake\Utility\Inflector;
 
-$action = Inflector::camelize($this->request->getParam('action'));
-
 $this->extend('Cirici/AdminLTE./Common/form');
-
-$this->assign('subtitle', $action);
 
 $this->start('breadcrumb');
 $this->Breadcrumbs
-    ->add(__('Roles'), ['action' => 'index'])
-    ->add($action, null, ['class' => 'active']);
+    ->add(__d('funayaki', 'Roles'), ['action' => 'index']);
+
+if ($this->request->param('action') == 'edit') {
+    $this->Breadcrumbs->add(__d('funayaki', 'Edit'), $this->request->getRequestTarget());
+}
+
+if ($this->request->param('action') == 'add') {
+    $this->Breadcrumbs->add(__d('funayaki', 'Add'), $this->request->getRequestTarget());
+}
 
 echo $this->Breadcrumbs->render();
 $this->end();
