@@ -6,12 +6,8 @@
 
 $this->extend('Cirici/AdminLTE./Common/index');
 
-$this->start('breadcrumb');
 $this->Breadcrumbs
     ->add(__d('funayaki', 'Users'), $this->request->getRequestTarget());
-
-echo $this->Breadcrumbs->render();
-$this->end();
 
 $this->start('page-numbers');
 echo $this->Paginator->numbers();
