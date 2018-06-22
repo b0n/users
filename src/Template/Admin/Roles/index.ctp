@@ -29,7 +29,7 @@ $this->end();
     <th><?= $this->Paginator->sort('alias') ?></th>
     <th><?= $this->Paginator->sort('created') ?></th>
     <th><?= $this->Paginator->sort('modified') ?></th>
-    <th><?= __('Actions') ?></th>
+    <th><?= __d('funayaki', 'Actions') ?></th>
 </tr>
 </thead>
 <?php $this->end(); ?>
@@ -44,9 +44,9 @@ $this->end();
         <td><?= h($role->created) ?></td>
         <td><?= h($role->modified) ?></td>
         <td class="actions" style="white-space:nowrap">
-            <?= $this->Html->link(__('View'), ['action' => 'view', $role->id], ['class' => 'btn btn-default btn-xs']) ?>
-            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $role->id], ['class' => 'btn btn-default btn-xs']) ?>
-            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $role->id], ['confirm' => __('Are you sure you want to delete # {0}?', $role->id), 'class' => 'btn btn-danger btn-xs']) ?>
+            <?= $this->Html->link(__d('funayaki', 'View'), ['action' => 'view', $role->id], ['class' => 'btn btn-default btn-xs']) ?>
+            <?= $this->Html->link(__d('funayaki', 'Edit'), ['action' => 'edit', $role->id], ['class' => 'btn btn-default btn-xs']) ?>
+            <?= $this->Form->postLink(__d('funayaki', 'Delete'), ['action' => 'delete', $role->id], ['confirm' => __d('funayaki', 'Are you sure you want to delete # {0}?', $role->id), 'class' => 'btn btn-danger btn-xs']) ?>
         </td>
     </tr>
 <?php endforeach; ?>

@@ -8,7 +8,6 @@ use Cake\Utility\Inflector;
 
 $this->extend('Cirici/AdminLTE./Common/form');
 
-$this->start('breadcrumb');
 $this->Breadcrumbs
     ->add(__d('funayaki', 'Users'), ['action' => 'index']);
 
@@ -19,9 +18,6 @@ if ($this->request->param('action') == 'edit') {
 if ($this->request->param('action') == 'add') {
     $this->Breadcrumbs->add(__d('funayaki', 'Add'), $this->request->getRequestTarget());
 }
-
-echo $this->Breadcrumbs->render();
-$this->end();
 
 $this->assign('form-start', $this->Form->create($user, ['novalidate' => true]));
 
@@ -37,7 +33,7 @@ echo $this->Form->control('active');
 $this->end();
 
 $this->start('form-button');
-echo $this->Form->button(__('Submit'));
+echo $this->Form->button(__d('funayaki', 'Submit'));
 $this->end();
 
 $this->assign('form-end', $this->Form->end());
