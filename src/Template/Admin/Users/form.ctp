@@ -24,8 +24,6 @@ $this->assign('form-start', $this->Form->create($user, ['novalidate' => true]));
 $this->start('form-content');
 echo $this->Form->control('username');
 echo $this->Form->control('name');
-echo $this->Form->control('password', ['type' => 'password']);
-echo $this->Form->control('verify_password', ['type' => 'password']);
 echo $this->Form->control('email');
 echo $this->Form->control('token');
 echo $this->Form->control('role_id', ['options' => $roles]);

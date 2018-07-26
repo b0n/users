@@ -1,5 +1,6 @@
 <?php
 namespace Users\Controller\Admin;
+
 use Cake\Event\Event;
 
 /**
@@ -199,6 +200,33 @@ class UsersController extends AppController
             }
         }
 
+        $this->set(compact('user'));
+    }
+
+    /**
+     * Change Password method
+     *
+     * @param string|null $id User id.
+     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
+     * @throws \Cake\Network\Exception\NotFoundException When record not found.
+     */
+    public function changePassword($id = null)
+    {
+        $user = $this->Users->get($id, [
+            'contain' => []
+        ]);
+
+        $user->password = '';
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('The user has been saved.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+        }
         $this->set(compact('user'));
     }
 }

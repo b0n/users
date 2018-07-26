@@ -52,6 +52,7 @@ $this->end();
         <td class="actions" style="white-space:nowrap">
             <?= $this->Html->link(__d('funayaki', 'View'), ['action' => 'view', $user->id], ['class' => 'btn btn-default btn-xs']) ?>
             <?= $this->Html->link(__d('funayaki', 'Edit'), ['action' => 'edit', $user->id], ['class' => 'btn btn-default btn-xs']) ?>
+            <?= $this->Html->link(__d('funayaki', 'Change Password'), ['action' => 'change_password', $user->id], ['class' => 'btn btn-default btn-xs']) ?>
             <?= $this->Form->postLink(__d('funayaki', 'Delete'), ['action' => 'delete', $user->id], ['confirm' => __d('funayaki', 'Are you sure you want to delete # {0}?', $user->id), 'class' => 'btn btn-danger btn-xs']) ?>
         </td>
     </tr>
