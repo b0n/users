@@ -98,7 +98,7 @@ class UsersTable extends Table
         $validator
             ->scalar('token')
             ->maxLength('token', 60)
-            ->requirePresence('token', 'create')
+            ->requirePresence('token', false)
             ->notEmpty('token');
 
         $validator

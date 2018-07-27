@@ -25,7 +25,10 @@ $this->start('form-content');
 echo $this->Form->control('username');
 echo $this->Form->control('name');
 echo $this->Form->control('email');
-echo $this->Form->control('token');
+if ($this->request->param('action') == 'add') {
+    echo $this->Form->control('password', ['type' => 'password']);
+    echo $this->Form->control('verify_password', ['type' => 'password']);
+}
 echo $this->Form->control('role_id', ['options' => $roles]);
 echo $this->Form->control('active');
 $this->end();
