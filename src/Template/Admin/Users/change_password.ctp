@@ -9,8 +9,8 @@ use Cake\Utility\Inflector;
 $this->extend('Cirici/AdminLTE./Common/form');
 
 $this->Breadcrumbs
-    ->add(__d('funayaki', 'Users'), ['action' => 'index'])
-    ->add(__d('funayaki', 'Change Password'));
+    ->add(__d('localized', 'Users'), ['action' => 'index'])
+    ->add(__d('localized', 'Change Password'));
 
 $this->assign('form-start', $this->Form->create($user, ['novalidate' => true]));
 
@@ -20,7 +20,7 @@ echo $this->Form->control('verify_password', ['type' => 'password']);
 $this->end();
 
 $this->start('form-button');
-echo $this->Form->button(__d('funayaki', 'Submit'));
+echo $this->Form->button(__d('localized', 'Save'));
 $this->end();
 
 $this->assign('form-end', $this->Form->end());

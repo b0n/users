@@ -6,12 +6,12 @@
 
 $this->extend('Cirici/AdminLTE./Common/view');
 
-$this->assign('subtitle', __('View'));
+$this->assign('subtitle', __d('localized', 'View'));
 
 $this->start('breadcrumb');
 $this->Breadcrumbs
-    ->add(__('Roles'), ['action' => 'index'])
-    ->add(__('View'), null, ['class' => 'active']);
+    ->add(__d('localized', 'Roles'), ['action' => 'index'])
+    ->add(__d('localized', 'View'), null, ['class' => 'active']);
 
 echo $this->Breadcrumbs->render();
 $this->end();
@@ -21,23 +21,23 @@ $this->end();
 <table class="table table-hover">
     <tbody>
     <tr>
-        <th><?= __('Title') ?></th>
+        <th><?= __d('localized', 'Title') ?></th>
         <td><?= h($role->title) ?></td>
     </tr>
     <tr>
-        <th><?= __('Alias') ?></th>
+        <th><?= __d('localized', 'Alias') ?></th>
         <td><?= h($role->alias) ?></td>
     </tr>
     <tr>
-        <th><?= __('Id') ?></th>
+        <th><?= __d('localized', 'Id') ?></th>
         <td><?= $this->Number->format($role->id) ?></td>
     </tr>
     <tr>
-        <th><?= __('Created') ?></th>
+        <th><?= __d('localized', 'Created') ?></th>
         <td><?= h($role->created) ?></td>
     </tr>
     <tr>
-        <th><?= __('Modified') ?></th>
+        <th><?= __d('localized', 'Modified') ?></th>
         <td><?= h($role->modified) ?></td>
     </tr>
     </tbody>

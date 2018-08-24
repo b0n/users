@@ -28,10 +28,10 @@ class AppController extends BaseController
                     'view' => 'form',
                     'messages' => [
                         'success' => [
-                            'text' => __d('croogo', 'The {name} has been saved.'),
+                            'text' => __d('localized', 'The {name} has been saved.'),
                         ],
                         'error' => [
-                            'text' => __d('croogo', 'The {name} could not be saved. Please, try again.'),
+                            'text' => __d('localized', 'The {name} could not be saved. Please, try again.'),
                         ]
                     ],
                 ],
@@ -40,10 +40,10 @@ class AppController extends BaseController
                     'view' => 'form',
                     'messages' => [
                         'success' => [
-                            'text' => __d('croogo', 'The {name} has been saved.'),
+                            'text' => __d('localized', 'The {name} has been saved.'),
                         ],
                         'error' => [
-                            'text' => __d('croogo', 'The {name} could not be saved. Please, try again.'),
+                            'text' => __d('localized', 'The {name} could not be saved. Please, try again.'),
                         ]
                     ],
                 ],
@@ -51,10 +51,10 @@ class AppController extends BaseController
                     'className' => 'Crud.Delete',
                     'messages' => [
                         'success' => [
-                            'text' => __d('croogo', 'The {name} has been deleted.'),
+                            'text' => __d('localized', 'The {name} has been deleted.'),
                         ],
                         'error' => [
-                            'text' => __d('croogo', 'The {name} could not be deleted. Please, try again.'),
+                            'text' => __d('localized', 'The {name} could not be deleted. Please, try again.'),
                         ]
                     ],
                 ],

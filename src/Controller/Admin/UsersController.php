@@ -67,11 +67,11 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__d('localized', 'The {0} has been saved.', __d('localized', 'User')));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__d('localized', 'The {0} could not be saved. Please, try again.', __d('localized', 'User')));
         }
         $roles = $this->Users->Roles->find('list', ['limit' => 200]);
         $this->set(compact('user', 'roles'));
@@ -94,11 +94,11 @@ class UsersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__d('localized', 'The {0} has been saved.', __d('localized', 'User')));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__d('localized', 'The {0} could not be saved. Please, try again.', __d('localized', 'User')));
         }
         $roles = $this->Users->Roles->find('list', ['limit' => 200]);
         $this->set(compact('user', 'roles'));
@@ -119,7 +119,7 @@ class UsersController extends AppController
                 $this->Auth->setUser($user);
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
-                $this->Flash->error(__('Username or password is incorrect'));
+                $this->Flash->error(__d('localized', 'Username or password is incorrect'));
             }
         }
     }
@@ -153,17 +153,17 @@ class UsersController extends AppController
                 ->first();
 
             if (!$user) {
-                $this->Flash->error(__('Invalid username'));
+                $this->Flash->error(__d('localized', 'Invalid username'));
                 return;
             }
 
             $success = $this->Users->resetPassword($user);
             if (!$success) {
-                $this->Flash->error(__('An error occurred. Please try again.'));
+                $this->Flash->error(__d('localized', 'An error occurred. Please try again.'));
                 return;
             }
 
-            $this->Flash->success(__('An email has been sent with instructions for resetting your password.'));
+            $this->Flash->success(__d('localized', 'An email has been sent with instructions for resetting your password.'));
             return $this->redirect(['action' => 'login']);
         }
     }
@@ -186,17 +186,17 @@ class UsersController extends AppController
             ->first();
 
         if (!$user) {
-            $this->Flash->error(__('An error occurred.'));
+            $this->Flash->error(__d('localized', 'An error occurred.'));
             return $this->redirect(['action' => 'login']);
         }
 
         if ($this->request->is(['put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('Your password has been reset successfully.'));
+                $this->Flash->success(__d('localized', 'Your password has been reset successfully.'));
                 return $this->redirect(['action' => 'login']);
             } else {
-                $this->Flash->error(__('Your password could not be saved. Please, try again.'));
+                $this->Flash->error(__d('localized', 'Your password could not be saved. Please, try again.'));
             }
         }
 
@@ -221,11 +221,11 @@ class UsersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__d('localized', 'The {0} has been saved.', __d('localized', 'User')));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__d('localized', 'The {0} could not be saved. Please, try again.', __d('localized', 'User')));
         }
         $this->set(compact('user'));
     }
