@@ -5,15 +5,15 @@
 ?>
 <p class="login-box-msg">Sign in to start your session</p>
 <?= $this->Form->create() ?>
-<?= $this->Form->control('username', ['label' => false, 'placeholder' => __('Username')]) ?>
-<?= $this->Form->control('password', ['label' => false, 'placeholder' => __('Password')]) ?>
+<?= $this->Form->control('username', ['label' => false, 'placeholder' => __d('localized', 'Username')]) ?>
+<?= $this->Form->control('password', ['label' => false, 'placeholder' => __d('localized', 'Password')]) ?>
 <div class="row">
-    <div class="col-xs-8">
-    </div>
     <div class="col-xs-4">
-        <?= $this->Form->button(__('Sign In'), ['class' => 'btn btn-primary btn-block btn-flat']); ?>
+    </div>
+    <div class="col-xs-8">
+        <?= $this->Form->button(__d('localized', 'Sign In'), ['class' => 'btn btn-primary btn-block btn-flat']); ?>
     </div>
     <!-- /.col -->
     <?= $this->Form->end() ?>
 </div>
-<?= $this->Html->link('I forgot my password', ['action' => 'forgot']); ?>
+<?= $this->Html->link(__d('localized', 'I forgot my password'), ['action' => 'forgot']); ?>

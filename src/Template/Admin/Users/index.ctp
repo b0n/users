@@ -7,32 +7,25 @@
 $this->extend('Cirici/AdminLTE./Common/index');
 
 $this->Breadcrumbs
-    ->add(__d('funayaki', 'Users'), $this->request->getRequestTarget());
+    ->add(__d('localized', 'Users'), $this->request->getRequestTarget());
 
 $this->start('page-numbers');
 echo $this->Paginator->numbers();
-$this->end();
-
-$this->append('header-actions');
-echo $this->Html->link(__d('fuyayaki', 'New User'),
-    ['action' => 'add'],
-    ['class' => 'btn btn-default pull-right']
-);
 $this->end();
 ?>
 
 <?php $this->start('table-header'); ?>
 <thead>
 <tr>
-    <th><?= $this->Paginator->sort('id') ?></th>
-    <th><?= $this->Paginator->sort('username') ?></th>
-    <th><?= $this->Paginator->sort('name') ?></th>
-    <th><?= $this->Paginator->sort('email') ?></th>
-    <th><?= $this->Paginator->sort('role_id') ?></th>
-    <th><?= $this->Paginator->sort('active') ?></th>
-    <th><?= $this->Paginator->sort('created') ?></th>
-    <th><?= $this->Paginator->sort('modified') ?></th>
-    <th><?= __d('funayaki', 'Actions') ?></th>
+    <th><?= $this->Paginator->sort('id', __d('localized', 'Id')) ?></th>
+    <th><?= $this->Paginator->sort('username', __d('localized', 'Username')) ?></th>
+    <th><?= $this->Paginator->sort('name', __d('localized', 'Name')) ?></th>
+    <th><?= $this->Paginator->sort('email', __d('localized', 'Email')) ?></th>
+    <th><?= $this->Paginator->sort('role_id', __d('localized', 'Role Id')) ?></th>
+    <th><?= $this->Paginator->sort('active', __d('localized', 'Active')) ?></th>
+    <th><?= $this->Paginator->sort('created', __d('localized', 'Created')) ?></th>
+    <th><?= $this->Paginator->sort('modified', __d('localized', 'Modified')) ?></th>
+    <th><?= __d('localized', 'Actions') ?></th>
 </tr>
 </thead>
 <?php $this->end(); ?>
@@ -50,10 +43,10 @@ $this->end();
         <td><?= h($user->created) ?></td>
         <td><?= h($user->modified) ?></td>
         <td class="actions" style="white-space:nowrap">
-            <?= $this->Html->link(__d('funayaki', 'View'), ['action' => 'view', $user->id], ['class' => 'btn btn-default btn-xs']) ?>
-            <?= $this->Html->link(__d('funayaki', 'Edit'), ['action' => 'edit', $user->id], ['class' => 'btn btn-default btn-xs']) ?>
-            <?= $this->Html->link(__d('funayaki', 'Change Password'), ['action' => 'change_password', $user->id], ['class' => 'btn btn-default btn-xs']) ?>
-            <?= $this->Form->postLink(__d('funayaki', 'Delete'), ['action' => 'delete', $user->id], ['confirm' => __d('funayaki', 'Are you sure you want to delete # {0}?', $user->id), 'class' => 'btn btn-danger btn-xs']) ?>
+            <?= $this->Html->link(__d('localized', 'View'), ['action' => 'view', $user->id], ['class' => 'btn btn-default btn-xs']) ?>
+            <?= $this->Html->link(__d('localized', 'Edit'), ['action' => 'edit', $user->id], ['class' => 'btn btn-default btn-xs']) ?>
+            <?= $this->Html->link(__d('localized', 'Change Password'), ['action' => 'change_password', $user->id], ['class' => 'btn btn-default btn-xs']) ?>
+            <?= $this->Form->postLink(__d('localized', 'Delete'), ['action' => 'delete', $user->id], ['confirm' => __d('localized', 'Are you sure you want to delete # {0}?', $user->id), 'class' => 'btn btn-danger btn-xs']) ?>
         </td>
     </tr>
 <?php endforeach; ?>

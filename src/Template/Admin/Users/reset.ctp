@@ -5,7 +5,7 @@
  */
 ?>
 <?= $this->Form->create($user) ?>
-<?= $this->Form->control('password', ['label' => false, 'value' => '', 'placeholder' => __('Password')]) ?>
-<?= $this->Form->control('verify_password', ['label' => false, 'type' => 'password', 'value' => '', 'placeholder' => __('Verify Password')]); ?>
-<?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary btn-block btn-flat']); ?>
+<?= $this->Form->control('password', ['label' => false, 'value' => '', 'placeholder' => __d('localized', 'Password')]) ?>
+<?= $this->Form->control('verify_password', ['label' => false, 'type' => 'password', 'value' => '', 'placeholder' => __d('localized', 'Verify Password')]); ?>
+<?= $this->Form->button(__d('localized', 'Save'), ['class' => 'btn btn-primary btn-block btn-flat']); ?>
 <?= $this->Form->end() ?>
