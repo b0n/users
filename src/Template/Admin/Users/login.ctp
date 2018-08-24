@@ -8,9 +8,9 @@
 <?= $this->Form->control('username', ['label' => false, 'placeholder' => __d('localized', 'Username')]) ?>
 <?= $this->Form->control('password', ['label' => false, 'placeholder' => __d('localized', 'Password')]) ?>
 <div class="row">
-    <div class="col-xs-4">
-    </div>
     <div class="col-xs-8">
+    </div>
+    <div class="col-xs-4">
         <?= $this->Form->button(__d('localized', 'Sign In'), ['class' => 'btn btn-primary btn-block btn-flat']); ?>
     </div>
     <!-- /.col -->
