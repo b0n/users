@@ -3,7 +3,6 @@
  * @var \App\View\AppView $this
  */
 ?>
-<p class="login-box-msg">Sign in to start your session</p>
 <?= $this->Form->create() ?>
 <?= $this->Form->control('username', ['label' => false, 'placeholder' => __d('localized', 'Username')]) ?>
 <?= $this->Form->control('password', ['label' => false, 'placeholder' => __d('localized', 'Password')]) ?>
