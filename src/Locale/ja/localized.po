@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2018-08-27 18:34+0900\n"
-"PO-Revision-Date: 2018-08-28 09:58+0900\n"
+"PO-Revision-Date: 2018-08-28 17:15+0900\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -37,7 +37,7 @@ msgstr "{0}を保存しました。"
 
 #: Controller/Admin/UsersController.php:70;74;97;101;224;228
 msgid "User"
-msgstr "ユーザ"
+msgstr "ユーザー"
 
 #: Controller/Admin/UsersController.php:74;101;228
 msgid "The {0} could not be saved. Please, try again."
@@ -45,15 +45,15 @@ msgstr "{0}を保存できませんでした。もう一度試してください
 
 #: Controller/Admin/UsersController.php:122
 msgid "Username or password is incorrect"
-msgstr "ユーザ名もしくはパスワードが間違っています"
+msgstr "ユーザー名またはパスワードが間違っています"
 
 #: Controller/Admin/UsersController.php:156
 msgid "Invalid username"
-msgstr "不正なユーザ名"
+msgstr "不正なユーザー名"
 
 #: Controller/Admin/UsersController.php:162
 msgid "An error occurred. Please try again."
-msgstr "エラーが起きました。もう一度試してください。"
+msgstr "エラーが発生しました。もう一度試してください。"
 
 #: Controller/Admin/UsersController.php:166
 msgid "An email has been sent with instructions for resetting your password."
@@ -61,7 +61,7 @@ msgstr "パスワードリセットのためのメールを送信しました。
 
 #: Controller/Admin/UsersController.php:189
 msgid "An error occurred."
-msgstr "エラーが起きました。"
+msgstr "エラーが発生しました。"
 
 #: Controller/Admin/UsersController.php:196
 msgid "Your password has been reset successfully."
@@ -133,7 +133,7 @@ msgstr "{0}を削除してもよろしいですか？"
 #: Template/Admin/Users/change_password.ctp:12 Template/Admin/Users/form.ctp:12
 #: Template/Admin/Users/index.ctp:10 Template/Admin/Users/view.ctp:13
 msgid "Users"
-msgstr "ユーザ"
+msgstr "ユーザー"
 
 #: Template/Admin/Users/change_password.ctp:13
 #: Template/Admin/Users/index.ctp:48
@@ -143,11 +143,11 @@ msgstr "パスワードを変更"
 #: Template/Admin/Users/forgot.ctp:7 Template/Admin/Users/index.ctp:21
 #: Template/Admin/Users/login.ctp:8 Template/Admin/Users/view.ctp:24
 msgid "Username"
-msgstr "ユーザ名"
+msgstr "ユーザー名"
 
 #: Template/Admin/Users/forgot.ctp:12
 msgid "Reset Password"
-msgstr "パスワードリセット"
+msgstr "パスワードをリセット"
 
 #: Template/Admin/Users/index.ctp:22 Template/Admin/Users/view.ctp:28
 msgid "Name"
@@ -155,7 +155,7 @@ msgstr "名前"
 
 #: Template/Admin/Users/index.ctp:23 Template/Admin/Users/view.ctp:32
 msgid "Email"
-msgstr "メールアドレス"
+msgstr "Eメール"
 
 #: Template/Admin/Users/index.ctp:24
 msgid "Role Id"
