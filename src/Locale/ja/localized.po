@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2018-08-27 18:34+0900\n"
-"PO-Revision-Date: 2018-08-28 09:33+0900\n"
+"PO-Revision-Date: 2018-08-28 09:43+0900\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -57,7 +57,7 @@ msgstr "エラーが起きました。もう一度試してください。"
 
 #: Controller/Admin/UsersController.php:166
 msgid "An email has been sent with instructions for resetting your password."
-msgstr "パスワードをリセットためのメールを送信しました。"
+msgstr "パスワードリセットためのメールを送信しました。"
 
 #: Controller/Admin/UsersController.php:189
 msgid "An error occurred."
