@@ -16,4 +16,4 @@
     <!-- /.col -->
     <?= $this->Form->end() ?>
 </div>
-<?= $this->Html->link(__d('localized', 'I forgot my password'), ['action' => 'forgot']); ?>
+<?= $this->Html->link(__d('localized', 'Forgot your password?'), ['action' => 'forgot']); ?>

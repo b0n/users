@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2018-08-24 18:25+0900\n"
+"POT-Creation-Date: 2018-08-27 18:34+0900\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -200,7 +200,7 @@ msgid "Sign In"
 msgstr ""
 
 #: Template/Admin/Users/login.ctp:19
-msgid "I forgot my password"
+msgid "Forgot your password?"
 msgstr ""
 
 #: Template/Admin/Users/reset.ctp:9
