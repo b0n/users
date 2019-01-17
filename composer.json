@@ -3,12 +3,6 @@
     "description": "Users plugin for CakePHP",
     "type": "cakephp-plugin",
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/funayaki/acl-manager"
-        }
-    ],
     "require": {
         "cakephp/cakephp": "^3.4"
     },
