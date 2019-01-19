@@ -23,8 +23,8 @@ class RolesSeed extends AbstractSeed
                 'id' => '1',
                 'title' => 'admin',
                 'alias' => 'Admin',
-                'created' => '2018-03-28 06:41:02',
-                'modified' => '2018-03-28 06:41:02',
+                'created' => '2018-01-01 00:00:00',
+                'modified' => '2018-01-01 00:00:00',
             ],
         ];
 

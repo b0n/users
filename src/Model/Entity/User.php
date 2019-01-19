@@ -67,6 +67,15 @@ class User extends Entity
         }
     }
 
+    /**
+     * @param $user
+     * @return array
+     */
+    public function bindNode($user) {
+        return array('model' => 'Roles', 'foreign_key' => $user['Users.Users']['role_id']);
+    }
+
+
     public function parentNode()
     {
         if (!$this->id) {
@@ -75,7 +84,7 @@ class User extends Entity
         if (isset($this->role_id)) {
             $roleId = $this->role_id;
         } else {
-            $Users = TableRegistry::get('Users');
+            $Users = TableRegistry::getTableLocator()->get('Users');
             $user = $Users->find('all', ['fields' => ['role_id']])->where(['id' => $this->id])->first();
             $roleId = $user->role_id;
         }

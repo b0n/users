@@ -41,12 +41,11 @@ class RolesTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Acl.Acl', ['type' => 'requester']);
 
         $this->hasMany('Users', [
             'foreignKey' => 'role_id'
         ]);
-
-        $this->addBehavior('Acl.Acl', ['type' => 'requester']);
     }
 
     /**

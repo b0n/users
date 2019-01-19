@@ -48,13 +48,12 @@ class UsersTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Acl.Acl', ['type' => 'requester', 'enabled' => false]);
 
         $this->belongsTo('Roles', [
             'foreignKey' => 'role_id',
             'joinType' => 'INNER'
         ]);
-
-        $this->addBehavior('Acl.Acl', ['type' => 'requester']);
     }
 
     /**
@@ -133,7 +132,7 @@ class UsersTable extends Table
     public function findAuth(Query $query, array $options)
     {
         $query
-            ->select(['id', 'username', 'password'])
+            ->select(['id', 'username', 'password', 'role_id'])
             ->find('active');
 
         return $query;
