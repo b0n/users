@@ -190,7 +190,7 @@ class UsersController extends AppController
             return $this->redirect(['action' => 'login']);
         }
 
-        if ($this->request->is(['put'])) {
+        if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
                 $this->Flash->success(__d('localized', 'Your password has been reset successfully.'));
